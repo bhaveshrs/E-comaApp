@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeFragment">
+
+   <androidx.appcompat.widget.LinearLayoutCompat
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       >
+       <com.smarteist.autoimageslider.SliderView
+           android:id="@+id/slider"
+           android:layout_width="match_parent"
+           android:layout_height="250dp"
+           android:layout_centerInParent="true"
+           app:sliderAnimationDuration="600"
+           app:sliderAutoCycleDirection="back_and_forth"
+           app:sliderIndicatorAnimationDuration="600"
+           app:sliderIndicatorEnabled="false"
+           app:sliderIndicatorGravity="center_horizontal|bottom"
+           app:sliderIndicatorMargin="15dp"
+           app:sliderIndicatorOrientation="horizontal"
+           app:sliderIndicatorPadding="3dp"
+           app:sliderIndicatorRadius="2dp"
+           app:sliderIndicatorSelectedColor="@color/purple_200"
+           app:sliderIndicatorUnselectedColor="#FFF"
+           app:sliderScrollTimeInSec="1" />
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="3dp"
+           android:background="#c3c3c3"
+           android:layout_marginVertical="5dp"
+           />
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Categories"
+           android:textAppearance="@style/TextAppearance.AppCompat.Large"
+           android:layout_margin="5dp"
+           />
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/recyclerview_cat"
+           />
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="3dp"
+           android:background="#c3c3c3"
+           android:layout_marginVertical="5dp"
+           />
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Products"
+           android:textAppearance="@style/TextAppearance.AppCompat.Large"
+           android:layout_margin="5dp"
+           />
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/recyclerview_products"
+           />
+   </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>
